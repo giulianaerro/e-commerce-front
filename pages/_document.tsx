@@ -18,7 +18,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <link rel="stylesheet" href="/fonts/silka/stylesheet.css" />
+        </Head>
         <body>
           <Main />
           <NextScript />
