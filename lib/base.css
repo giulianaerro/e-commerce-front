@@ -9,7 +9,10 @@ body {
   background-color: var(--grey-50)
 
 }
-
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
 :root {
 
   --font-family: "Silka", sans-serif;

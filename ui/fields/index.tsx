@@ -18,17 +18,17 @@ export const TextField = styled(H4).attrs({
   outline: solid rgba(0, 0, 0, 0.15) 1px;
   border: none;
   padding: 10px 10px;
-  border-bottom: solid 0.5px var(--gris-oscuro);
-  background-color: var(--blanco);
+  border-bottom: solid 0.5px var(--grey-300);
+  background-color: var(--grey-100);
 
   &:focus {
     background-color: white;
-    outline: solid 1px var(--gris-claro);
+    outline: solid 1px var(--grey-200);
   }
 
   ::placeholder,
   ::-webkit-input-placeholder {
-    color: var(--gris);
+    color: var(--grey-500);
   }
 `;
 export const FieldButton = styled.button`

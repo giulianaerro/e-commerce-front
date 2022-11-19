@@ -48,3 +48,8 @@ export const Tiny = styled.span`
   font-size: 12px;
   line-height: 1.4;
 `;
+export const Caption = styled.span`
+  font-size: 13px;
+  font-weight: normal;
+  text-transform: uppercase;
+`;

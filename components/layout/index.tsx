@@ -1,10 +1,8 @@
 import { Footer } from "components/footer";
 import { Header } from "components/header";
-import { useMe } from "lib/hooks";
 import { Root } from "./styled";
 
-export function Layout({ children }) {
-  const myData = useMe();
+export function Layout({ children }: any) {
   return (
     <Root>
       <Header />
