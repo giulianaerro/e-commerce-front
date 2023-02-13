@@ -21,6 +21,7 @@ import { useMe } from "lib/hooks";
 export const Header = () => {
   const router = useRouter();
   const { data } = useMe();
+  console.log(data);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -71,13 +72,9 @@ export const Header = () => {
         </OptionsLinks>
         <UserOptions>
           <ContainerCategory>
-            {data ? (
-              <H4>{data}</H4>
-            ) : (
-              <Link href={"/signin"}>
-                <H4>Acceder</H4>
-              </Link>
-            )}
+            <Link href={"/signin"}>
+              <H4>Acceder</H4>
+            </Link>
           </ContainerCategory>
         </UserOptions>
       </Content>
