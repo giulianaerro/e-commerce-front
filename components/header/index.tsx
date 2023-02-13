@@ -16,14 +16,15 @@ import {
   LoginButton,
   FieldWithButtonFooter,
 } from "./styled";
+import { useMe } from "lib/hooks";
 
 export const Header = () => {
   const router = useRouter();
+  const { data } = useMe();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const searchValue = e.target.search.value;
-    console.log(searchValue);
     router.push(`/search/${searchValue}`);
   };
 
@@ -70,9 +71,13 @@ export const Header = () => {
         </OptionsLinks>
         <UserOptions>
           <ContainerCategory>
-            <Link href={"/signin"}>
-              <H4>Acceder</H4>
-            </Link>
+            {data ? (
+              <H4>{data}</H4>
+            ) : (
+              <Link href={"/signin"}>
+                <H4>Acceder</H4>
+              </Link>
+            )}
           </ContainerCategory>
         </UserOptions>
       </Content>

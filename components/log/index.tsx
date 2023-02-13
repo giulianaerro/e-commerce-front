@@ -21,7 +21,6 @@ export function LogIn() {
   const { register, handleSubmit, setValue } = useForm();
 
   const onSubmit: any = async ({ email, code }) => {
-    console.log(email, code);
     if (email && code) {
       try {
         await getToken(email, code);
@@ -31,7 +30,6 @@ export function LogIn() {
       }
     } else if (email) {
       setCodeSent(email);
-      sendCode(email);
       const { code: receivedCode } = await sendCode(email);
       if (receivedCode) {
         setValue("code", receivedCode);
